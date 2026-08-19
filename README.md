@@ -210,7 +210,7 @@ cargo clippy --workspace --all-targets
 | `tracing` | Structured logging |
 
 
-##Demo Screenshot
+## Demo Screenshot
 
 
 <img width="1772" height="1116" alt="demo_screenshot" src="https://github.com/user-attachments/assets/48e7abca-ed34-4c3d-8b1b-dffce3acd70a" />
