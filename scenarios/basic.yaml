@@ -1,0 +1,39 @@
+name: Basic Scenario
+description: Simple two-faction encounter with basic emission and observation
+
+world:
+  map_width: 500.0
+  map_height: 500.0
+  max_ticks: 100
+  environment:
+    propagation_loss_exponent: 2.0
+    ambient_noise_db: -100.0
+    weather_attenuation: 0.0
+    terrain_masking: false
+
+entities:
+  - kind: Aircraft
+    faction: Blue
+    position:
+      x: 100.0
+      y: 250.0
+    label: Blue Scout
+    emits:
+      - channel: 1
+        frequency_mhz: 2400.0
+        category: Communication
+        power_db: 30.0
+    receives: true
+
+  - kind: Aircraft
+    faction: Red
+    position:
+      x: 400.0
+      y: 250.0
+    label: Red Patrol
+    emits:
+      - channel: 3
+        frequency_mhz: 9500.0
+        category: Radar
+        power_db: 50.0
+    receives: true

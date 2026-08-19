@@ -1,0 +1,64 @@
+name: Combat Scenario
+description: Aggressive EW engagement — Blue detects Red radar and deploys countermeasures
+
+world:
+  map_width: 400.0
+  map_height: 400.0
+  max_ticks: 200
+  environment:
+    propagation_loss_exponent: 2.0
+    ambient_noise_db: -100.0
+    weather_attenuation: 0.0
+    terrain_masking: false
+
+entities:
+  - kind: Aircraft
+    faction: Blue
+    position:
+      x: 100.0
+      y: 200.0
+    label: Blue-1
+    emits:
+      - channel: 1
+        frequency_mhz: 100.0
+        category: Communication
+        power_db: 60.0
+    receives: true
+
+  - kind: Aircraft
+    faction: Blue
+    position:
+      x: 140.0
+      y: 200.0
+    label: Blue-2
+    receives: true
+
+  - kind: Aircraft
+    faction: Red
+    position:
+      x: 200.0
+      y: 200.0
+    label: Red-1
+    emits:
+      - channel: 3
+        frequency_mhz: 100.0
+        category: Radar
+        power_db: 60.0
+      - channel: 5
+        frequency_mhz: 100.0
+        category: Communication
+        power_db: 50.0
+    receives: true
+
+  - kind: Aircraft
+    faction: Red
+    position:
+      x: 220.0
+      y: 210.0
+    label: Red-2
+    emits:
+      - channel: 7
+        frequency_mhz: 100.0
+        category: Radar
+        power_db: 70.0
+    receives: true

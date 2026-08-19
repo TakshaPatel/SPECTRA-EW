@@ -1,0 +1,15 @@
+[package]
+name = "spectra-ew"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Abstract electronic warfare effects — jamming, deception, interference"
+
+[dependencies]
+spectra-core = { path = "../spectra-core" }
+spectra-sensors = { path = "../spectra-sensors" }
+serde.workspace = true
+tracing.workspace = true
+rand.workspace = true
+rand_chacha.workspace = true

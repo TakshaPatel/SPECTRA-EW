@@ -1,0 +1,18 @@
+[package]
+name = "spectra-ui"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Visualization layer — colorful TUI for simulation monitoring"
+
+[dependencies]
+spectra-core = { path = "../spectra-core" }
+spectra-sim = { path = "../spectra-sim" }
+spectra-sensors = { path = "../spectra-sensors" }
+spectra-ew = { path = "../spectra-ew" }
+spectra-ai = { path = "../spectra-ai" }
+spectra-experiments = { path = "../spectra-experiments" }
+ratatui.workspace = true
+crossterm.workspace = true
+serde.workspace = true

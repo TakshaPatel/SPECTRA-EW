@@ -1,0 +1,69 @@
+name: Contested Spectrum
+description: Multiple emitters on overlapping channels creating interference
+
+world:
+  map_width: 800.0
+  map_height: 800.0
+  max_ticks: 200
+  environment:
+    propagation_loss_exponent: 2.5
+    ambient_noise_db: -95.0
+    weather_attenuation: 2.0
+    terrain_masking: true
+
+entities:
+  - kind: GroundStation
+    faction: Blue
+    position:
+      x: 200.0
+      y: 400.0
+    label: Blue Command
+    emits:
+      - channel: 1
+        frequency_mhz: 2400.0
+        category: Communication
+        power_db: 40.0
+      - channel: 2
+        frequency_mhz: 5800.0
+        category: DataLink
+        power_db: 35.0
+    receives: true
+
+  - kind: Aircraft
+    faction: Blue
+    position:
+      x: 300.0
+      y: 350.0
+    label: Blue AWACS
+    emits:
+      - channel: 1
+        frequency_mhz: 2400.0
+        category: Communication
+        power_db: 35.0
+    receives: true
+
+  - kind: Aircraft
+    faction: Red
+    position:
+      x: 600.0
+      y: 300.0
+    label: Red Interceptor
+    emits:
+      - channel: 1
+        frequency_mhz: 2400.0
+        category: Radar
+        power_db: 55.0
+    receives: true
+
+  - kind: Ship
+    faction: Red
+    position:
+      x: 500.0
+      y: 600.0
+    label: Red Cruiser
+    emits:
+      - channel: 2
+        frequency_mhz: 5800.0
+        category: Radar
+        power_db: 60.0
+    receives: true

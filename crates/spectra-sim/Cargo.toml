@@ -1,0 +1,21 @@
+[package]
+name = "spectra-sim"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Simulation engine — deterministic timestep loop orchestrating all subsystems"
+
+[dependencies]
+spectra-core = { path = "../spectra-core" }
+spectra-sensors = { path = "../spectra-sensors" }
+spectra-ew = { path = "../spectra-ew" }
+spectra-ai = { path = "../spectra-ai" }
+serde.workspace = true
+serde_yaml.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+rand.workspace = true
+rand_chacha.workspace = true
