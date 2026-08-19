@@ -8,7 +8,6 @@ A research-oriented simulation of contested electromagnetic environments. Models
 
 SPECTRA is intended for cybersecurity, systems engineering, and simulation research. It provides a framework for studying how autonomous agents make decisions under imperfect information in contested spectrum environments.
 
-## Safety Boundary
 
 **This project does not:**
 
@@ -62,14 +61,6 @@ spectra-sim (deterministic tick engine)
 
 Entities belong to factions (Blue/Red/Neutral) and carry emitters and/or receivers. Each entity occupies a position on a 2D map.
 
-### Signal Propagation
-
-Received power follows inverse-square path loss with frequency-dependent attenuation:
-
-```
-path_loss = 10 * n * log10(distance) + 20 * log10(frequency_mhz)
-received_power = emitter_power - path_loss - weather_attenuation
-```
 
 ### Sensor Processing
 
