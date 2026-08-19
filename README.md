@@ -6,7 +6,7 @@ A research-oriented simulation of contested electromagnetic environments. Models
 
 ## Purpose
 
-SPECTRA is intended for AI ethics, cybersecurity, systems engineering, and simulation research. It provides a framework for studying how autonomous agents make decisions under imperfect information in contested spectrum environments.
+SPECTRA is intended for cybersecurity, systems engineering, and simulation research. It provides a framework for studying how autonomous agents make decisions under imperfect information in contested spectrum environments.
 
 ## Safety Boundary
 
